@@ -158,13 +158,15 @@ npm run dev
 
 <div style="display: flex; gap: 20px; flex-direction: column; justify-content: center;">
   <img 
-    src="https://github.com/1228727365/Jump_Assistant/blob/master/image/image.png?raw=true" 
-    alt="跳跃辅助工具截图" 
+    src="https://github.com/1228727365/YouCun/blob/main/image/1.png" 
     style="width: 300px; height: auto; object-fit: contain;"
   >
   <img 
-    src="https://github.com/1228727365/YouCun/blob/master/image/屏幕截图_20250813_211522.png?raw=true" 
-    alt="应用界面截图" 
+    src="https://github.com/1228727365/YouCun/blob/main/image/2.png" 
+    style="width: 300px; height: auto; object-fit: contain;"
+  >
+    <img 
+    src="https://github.com/1228727365/YouCun/blob/main/image/3.png" 
     style="width: 300px; height: auto; object-fit: contain;"
   >
 </div>
