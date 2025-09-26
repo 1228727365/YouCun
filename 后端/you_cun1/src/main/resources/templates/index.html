@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M的小窝</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dracula: {
+                            bg: '#282a36',
+                            current: '#44475a',
+                            foreground: '#f8f8f2',
+                            comment: '#6272a4',
+                            cyan: '#8be9fd',
+                            green: '#50fa7b',
+                            orange: '#ffb86c',
+                            pink: '#ff79c6',
+                            purple: '#bd93f9',
+                            red: '#ff5555',
+                            yellow: '#f1fa8c'
+                        }
+                    },
+                    fontFamily: {
+                        dracula: ['Fira Code', 'Consolas', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-glow {
+                text-shadow: 0 0 8px rgba(189, 147, 249, 0.6);
+            }
+
+            .border-glow {
+                box-shadow: 0 0 5px rgba(189, 147, 249, 0.5);
+            }
+
+            .dracula-gradient {
+                background: linear-gradient(135deg, #282a36 0%, #44475a 100%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-dracula-bg text-dracula-foreground min-h-screen font-dracula">
+<div class="fixed inset-0 overflow-hidden pointer-events-none opacity-10">
+    <div class="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-dracula-purple blur-3xl"></div>
+    <div class="absolute top-1/3 -right-20 w-80 h-80 rounded-full bg-dracula-red blur-3xl"></div>
+    <div class="absolute -bottom-20 left-1/4 w-80 h-80 rounded-full bg-dracula-cyan blur-3xl"></div>
+</div>
+<div class="container mx-auto px-4 py-16 max-w-4xl relative z-10">
+    <header class="mb-12 text-center">
+        <div class="inline-block mb-4">
+            <i class="fa fa-moon-o text-dracula-purple text-4xl animate-pulse"></i>
+        </div>
+        <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold mb-4 text-dracula-purple text-glow">
+            API接口服务
+        </h1>
+        <div class="w-32 h-1 bg-dracula-purple mx-auto rounded-full border-glow"></div>
+    </header>
+
+    <!-- 段落内容区域 -->
+    <main class="bg-dracula-current/50 backdrop-blur-sm rounded-xl p-8 border border-dracula-purple/30 border-glow transition-all duration-500 hover:border-dracula-purple/60">
+        <p class="text-lg leading-relaxed mb-6 tracking-wide">
+            欢迎使用我的API接口服务。这里是数据与应用的交汇点，是创意与功能的桥梁。我的接口已准备就绪，随时响应你的调用。
+        </p>
+
+        <p class="text-lg leading-relaxed mb-6 tracking-wide">
+            我们的服务器24/7全天候待命，确保你的应用程序获得持续支持。如有任何疑问或需要协助，请查阅我们的文档或联系技术支持团队。期待看到你的创新应用与我们的API碰撞出精彩火花。
+        </p>
+
+    </main>
+    <footer class="mt-12 text-center text-dracula-comment text-sm">
+        <p>
+            <i class="fa fa-copyright mr-1"></i> M | <i class="fa fa-clock-o ml-1"></i> API
+        </p>
+    </footer>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mainContent = document.querySelector('main');
+        mainContent.style.opacity = '0';
+        mainContent.style.transform = 'translateY(20px)';
+        mainContent.style.filter = 'blur(5px)';
+
+        setTimeout(() => {
+            mainContent.style.transition = 'opacity 1s ease, transform 1s ease, filter 1s ease';
+            mainContent.style.opacity = '1';
+            mainContent.style.transform = 'translateY(0)';
+            mainContent.style.filter = 'blur(0)';
+        }, 300);
+    });
+    document.addEventListener('mousemove', (e) => {
+        const glowElements = document.querySelectorAll('.border-glow');
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+
+        glowElements.forEach(el => {
+            el.style.boxShadow = `
+                    0 0 5px rgba(189, 147, 249, 0.5),
+                    ${x * 10 - 5}px ${y * 10 - 5}px 15px rgba(189, 147, 249, 0.2)
+                `;
+        });
+    });
+</script>
+</body>
+</html>

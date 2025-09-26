@@ -1,0 +1,19 @@
+
+/* 确认按钮样式 */
+.custom-message-box .el-button--primary {
+    background-color: #252E49; /* 蓝色按钮 */
+    border-color: #252E49;
+}
+
+/* 确认按钮悬停效果 */
+.custom-message-box .el-button--primary:hover {
+    background-color: #7F5FEC; /* 深一点的蓝色 */
+    border-color: #7F5FEC;
+}
+
+/* 取消按钮样式 */
+.custom-message-box .el-button--default {
+    background-color: #f1f5f9; /* 浅灰色按钮 */
+    color:#252E49; /* 按钮文字颜色 */
+    border-color: #e2e8f0;
+}

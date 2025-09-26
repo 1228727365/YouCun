@@ -1,0 +1,50 @@
+{
+    "version": 1.8,
+    "Forced_update": "yes",
+    "Updated_content": "修复邮箱发送失败问题\n新增防止代码崩溃界面\n优化关于界面无法适配\n新增编辑器字体大小\n新增编辑器字体是否缩放\n优化编辑器保存重复文档失败\n优化图标统计控件不适配\n优化弹窗不适应.",
+    "Update_link": "http://www.aideapp.cn/app.apk",
+    "Buy_Link": "http://m.kuaifaka.net/shop/cFzAE4fs",
+    "abuot": 
+    [
+        {
+            "name": "Studio",
+            "qq": "1228727365",
+            "introduce": "JAVA前端APP开发"
+        },
+        {
+            "name": "萧",
+            "qq": "476112934",
+            "introduce": "web技术支持"
+        },
+        {
+            "name": "琳linnn",
+            "qq": "2260492606",
+            "introduce": "服务器后台管理"
+        },
+        {
+            "name": "小怪怪",
+            "qq": "2456993017",
+            "introduce": "备案技术支持"
+        },
+        {
+            "name": "403",
+            "qq": "2307595410",
+            "introduce": "赞助支持"
+        }
+    ],
+    "group": 
+    [
+        {
+            "name": "云链-交流群",
+            "qun": "839664526",
+            "introduce": "官方交流群"
+        }
+    ],
+    "web": 
+    [
+        {
+            "name": "初陌博客",
+            "url": "http://bk.notei.cn/"
+        }
+    ]
+}
